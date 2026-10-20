@@ -1,17 +1,31 @@
-# Online Course Service
 
-Online course management application with a Vite/React frontend, a Next.js API backend, and MongoDB storage.
+How to Test the App
 
-## Requirements
+Student Information
+Student Name: Nang Nu Nu Aye
+Student ID: 6643005
+
+Test Credentials
+
+#Teacher
+Username / Email: teacher1
+Password: Teacher123!
+
+#Student
+Username/Email: sure@gmail.com
+Password: 12345678
+
+Prerequisites
 
 - Node.js 20 or newer
 - MongoDB connection string
 
-## Run locally
+How to Run & Test
 
 ### Backend
 
 ```bash
+n npm create next-app@latest next-backend
 cd next-backend
 npm install
 cp .env.example .env.local
@@ -31,6 +45,7 @@ The API runs at `http://localhost:3000`. `DB_NAME` defaults to `wad_final`.
 In another terminal:
 
 ```bash
+npm create vite@latest .
 cd frontend
 npm install
 cp .env.example .env.development
@@ -45,7 +60,7 @@ Run `npm run seed:users` in `next-backend` against the MongoDB database you inte
 
 | Role | Username | Email | Password |
 |---|---|---|---|
-| Student | `student1` | `student1@example.com` | `Student123!` |
+| Student | `student1` | `sure@gmail.com` | `12345678` |
 | Student | `student2` | `student2@example.com` | `Student123!` |
 | Student | `student3` | `student3@example.com` | `Student123!` |
 | Teacher | `teacher1` | `teacher1@example.com` | `Teacher123!` |
@@ -67,10 +82,3 @@ Deploy each folder as a separate Vercel project from the same repository:
 
 The frontend stores the bearer token and also uses the backend's HTTP-only auth cookie. Backend CORS is limited to `FRONTEND_ORIGIN`.
 
-## Submission links
-
-- Backend repository: _add link_
-- Frontend repository: _add link_
-- Deployed backend: _add URL_
-- Deployed frontend: _add URL_
-- Screen recording: _add link_
